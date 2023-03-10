@@ -2,13 +2,21 @@
 
 ##  Introduction
 
-This document describes the procedure to replace a motor or to perform a maintenance operation out of its place.
+This document describes the procedure to replace a Bosch motor or to perform a maintenance operation out of its place.
+
+Bosch motor are used for 
+ * Locking pins
+ * Deployable platforms
+ * Azimuth Cable Wrap
+ * Camera Cable Wrap
+ * Balancing System
+ * Mirror Cover and Mirror Cover locks
 
 ##  Reference document list
 
 | **No.** | **DOCUMENT** | **CODE** | **VERSION** |
 |---------|--------------|----------|-------------|
-| **1**   |              |          |             |
+| **1**   |MCS Design Electrical Schematics|3151_MCS_0022|9.0|
 
 
 ##  Motor replacement procedure
@@ -34,16 +42,16 @@ Common steps
     2.  For deployable platforms use the retracted position.
     3.  For Mirror Covers use the retracted position
     4.  For Mirror Cover locks, put the mirror cover in retracted position and lock with mirror cover locks.
-    5.  For Balancing motors, …..
-    6.  Azimuth Cable Wrap. Move azimuth to zero absolute position
-    7.  Camera Cable Wrap. Move camera rotator to zero position.
+    5.  For Balancing motors, move each motor to zero position.
+    6.  Azimuth Cable Wrap. Move azimuth to zero absolute position, then move both Azimuth Cable Wrap motors to zero position.
+    7.  Camera Cable Wrap. Move camera rotator to zero position, then move both Camera Cable Wrap motors to zero position.
 6.  Use the Telescope correct position to ensure that the operation is possible
 7.  Power off the EUI computer (MCC), and the electrical cabinets.
 8.  Take all necessary security measures that are necessary to lock the system according to health & safety.
 9.  Lock the element to avoid movement when motor and brake is released (this is not necessary for Azimuth Cable Wrap and Camera Cable Wrap, since the other motor will keep the subsystem braked).
 10.  Take out the motor.
 11.  If the movement was not possible in step 5, move the element to zero-position manually (see Annex 1)
-12.  Fit the motor to its position.
+12.  Fit the motor to its position and wire according with document **1**.
 13. Unlock the element.
 14. Open the Bosch-Rexroth engineering tool IndraWorks Engineering. The IndraWorks must be placed in a windows machine with Ethernet connection to the MLC (209A1 element in the schematics MCS_Design_ElectricalSchematics). This document is written for IndraWorks ML\* 14V22 P7.
     1.  For MCS, place the windows machine connected to port Gi1/2 of the Cisco IE3000 switch inside the cabinet using the ip 192.168.209.225 with 255.255.0.0 mask.
