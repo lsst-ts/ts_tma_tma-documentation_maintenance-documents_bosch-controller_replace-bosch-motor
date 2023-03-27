@@ -50,7 +50,7 @@ Common steps
 8.  Take all necessary security measures that are necessary to lock the system according to health & safety.
 9.  Lock the element to avoid movement when motor and brake is released (this is not necessary for Azimuth Cable Wrap and Camera Cable Wrap, since the other motor will keep the subsystem braked).
 10.  Take out the motor.
-11.  If the movement was not possible in step 5, move the element to zero-position manually (see Annex 1)
+11.  If the movement was not possible in step 5, move the element to zero-position manually (see Annex 1).
 12.  Fit the motor to its position and wire according with document **1**.
 13. Unlock the element.
 14. Open the Bosch-Rexroth engineering tool IndraWorks Engineering. The IndraWorks must be placed in a windows machine with Ethernet connection to the MLC (209A1 element in the schematics MCS_Design_ElectricalSchematics). This document is written for IndraWorks ML\* 14V22 P7.
@@ -99,7 +99,7 @@ If the CCW is not linked to the camera proceed with test CE_CCW_5k from 3151_MCS
 
 If the CCW is linked to the camera move the camera to allow moving the CCW to the limits.
 
-#  Annex 1
+#  Annex 1. Manual movement procedure
 
 This section will cover how to proceed when the motor is not able to move the subsystem to the zero position. In that case the procedure described in section 3.1 includes the point 9 to move manually to a fixed position. In the different points of this section this position is defined as well as some other steps to add to the basic procedure to get the subsystem running properly
 
@@ -154,7 +154,27 @@ Move the desired mirror cover to retracted position once the motor is released f
 
 Remove the motor and move manually to lock position. The mirror cover lock must be able to lock the mirror cover without hitting in any mirror cover.
 
-# Annex 2
+# Annex2. Release the motor brake
+
+**To manage the motor brake from the Indarworks the motor could no be used by the EUI**. The EUI will fault using this motor.
+
+If the motor has a brake it could be released using the Indraworks engineering tool. To enable the capability of managing the Brake from the Indraworks the drive must be in Parametrization mode. To put the drive in Parametrization mode right click in the drive and select the parametrization mode.
+
+![Enable Parametrization Mode in the drive](media/yOyy2ezoQv.png)
+
+If the drive is parametrization mode, [PM] is shown next to the drive
+
+![Parametrization Mode enabled in the drive](media/HEMkTZl6yB.png)
+
+To manage the brake, open the drive, then the Motor, brake, measuring systems folder, and there the Brake page. Make sure that in commands section the "Release holding brake" allowed is enabled and then pressing Release holding brake or Apply holding brake, the brake will release or engage.
+
+![Release Brake](media/rj6CMTCQTU.png)
+
+<mark>It is mandatory to disable parametrization mode in the drive.</mark> Once the operation is finished the parametrization mode in the drive must be disabled. Right click in the drive and click on Parametrization mode to disable it. 
+
+![Disable Parametrization mode](media/yycSZD1UnR.png)
+
+# Annex 3. Motor names in Indraworks
 
 This annex describes the names used for the motors in the IndraWorks tool
 
