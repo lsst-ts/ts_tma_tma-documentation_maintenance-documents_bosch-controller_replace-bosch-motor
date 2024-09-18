@@ -63,18 +63,13 @@ Common steps
 
     ![Switches Device Online button in the menu bar](media/8d3a34dcdf84f2abc80f2d62edce436d.png)
 
-
 17.  Enable the axis commissioning in the Motion field under the IndraMotionMlc target. Right click on the Motion.
 
-    ![Axis commissioning in the context menu](media/66fe9ef81cdcde0f6ba219f43242c2dc.png)
-
-
+    ![Axis commissioning in the context menu](media/AxisCommisioning.png)
 
 18. Add desired axis to the view opened in the right window. See Annex 2 for more info about motor names.
 
     ![Select the desired drive](media/959ac8f3aa84895a7de2a0e3ffc4c577.png)
-
-
 
 19. Select the axis and in Positioning tab click on “Set absolute position”.
 20. Disconnect the IndraWorks clicking in the “Switch Devices Offline” icon or in the Menu “IndarMotionMlc1-\>Switch Offline”.
@@ -82,27 +77,27 @@ Common steps
 
 ## Subsystem specific checks
 
-###  Camera cable wrap
+### Camera cable wrap
 
 There are two checks to perform with camera cable wrap.
 
-####  Same reading in both motors
+#### Same reading in both motors
 
 Using the EUI and if the CCW is not linked to the camera, switch on the CCW and move to -45 degrees with motor 1 and check that the motors readings are inside 0.3 degrees. Change to motor 2 and move to 45 degrees and check that both motors readings are inside 0.3 degrees (See test CE_CCW_4a and CE_CCW_4b from 3151_MCS_044a test procedure for more info about managing active drive).
 
 If the CCW is linked to the camera do the same test but moving only 1.5 degress in each direction. If one of the limits is pressed in the 1.5 degress movement means that CCW is not in the middle of the rotator gap, so try to move to positions close to the limits at 0.2 deg/s in both directions. In the extreme positions check that both motors readings are inside 0.3 degrees.
 
-####  Travel limits in 92 degrees
+#### Travel limits in 92 degrees
 
 If the CCW is not linked to the camera proceed with test CE_CCW_5k from 3151_MCS_044a test procedure and check that the limits are located at ±92 ±0.3 degrees.
 
 If the CCW is linked to the camera move the camera to allow moving the CCW to the limits.
 
-#  Annex 1. Manual movement procedure
+## Annex 1. Manual movement procedure
 
 This section will cover how to proceed when the motor is not able to move the subsystem to the zero position. In that case the procedure described in section 3.1 includes the point 9 to move manually to a fixed position. In the different points of this section this position is defined as well as some other steps to add to the basic procedure to get the subsystem running properly
 
-## Camera Cable Wrap
+### Camera Cable Wrap
 
 In the camera cable wrap there are two red arrows, one in the rotating part and other in the fixed part. When those arrows are aligned, the position of the camera cable wrap is 0 degrees.
 
@@ -110,7 +105,7 @@ In the camera cable wrap there are two red arrows, one in the rotating part and 
 
 If the specific check 3.2.1.2 fails, it could be because the arrows are not aligned good enough. The camera cable wrap could be move to zero position plus-minus the error detected in both limits and proceed with step 13 of the section 3.1 again.
 
-## Azimuth Cable Wrap
+### Azimuth Cable Wrap
 
 The steps to find the zero of the azimuth cable wrap, when none of the motors is able to move the azimuth cable wrap, are describe in next points.
 
@@ -133,27 +128,27 @@ The steps to find the zero of the azimuth cable wrap, when none of the motors is
 13. Move to zero position
 14. Continue with step 14 on of section 3.1
 
-## Locking pins
+### Locking pins
 
 Move the locking pins manually to unlocked position, just when the most external switch is free.
 
 Note: Do not release both locking pins at the same time.
 
-## Deployable Platforms
+### Deployable Platforms
 
 Move the platforms to the retracted position where the platform is hitting with the mechanical limit. This is the zero for the platforms.
 
-## Balancing
+### Balancing
 
-## Mirror Cover
+### Mirror Cover
 
 Move the desired mirror cover to retracted position once the motor is released from the mirror cover.
 
-## Mirror Cover locks
+### Mirror Cover locks
 
 Remove the motor and move manually to lock position. The mirror cover lock must be able to lock the mirror cover without hitting in any mirror cover.
 
-# Annex2. Release the motor brake
+## Annex 2. Release the motor brake
 
 **To manage the motor brake from the Indarworks the motor could no be used by the EUI**. The EUI will fault using this motor.
 
@@ -173,17 +168,17 @@ To manage the brake, open the drive, then the Motor, brake, measuring systems fo
 
 ![Disable Parametrization mode](media/yycSZD1UnR.png)
 
-# Annex 3. Motor names in Indraworks
+## Annex 3. Motor names in Indraworks
 
 This annex describes the names used for the motors in the IndraWorks tool
 
-## Locking Pins
+### Locking Pins
 
 LOCKpinXP. Locking pin located in the axis x+ of the telescope coordinate axes.
 
 LOCKpinXN. Locking pin located in the axis x- of the telescope coordinate axes.
 
-## Deployable Platforms
+### Deployable Platforms
 
 DP1XP. Motor of the section 1 of the deployable platform located in the axis x+ of the telescope coordinate axes.
 
@@ -193,7 +188,7 @@ DP1XN. Motor of the section 1 of the deployable platform located in the axis x- 
 
 DP2XN. Motor of the section 2 of the deployable platform located in the axis x- of the telescope coordinate axes.
 
-## Mirror Cover
+### Mirror Cover
 
 MCLXP. Motor for the mirror cover lock for the mirror cover located in the axis x+ of the telescope coordinate axes.
 
@@ -211,7 +206,7 @@ MCLYN. Motor for the mirror cover lock for the mirror cover located in the axis 
 
 MCYN. Motor for the mirror cover located in the axis y- of the telescope coordinate axes.
 
-## Balancing system
+### Balancing system
 
 BAL_0XPos. Motor that moves the balancing mass located in x+ of the telescope coordinate axes and has effect when elevation axis of the telescope is at 0 degrees.
 
@@ -221,17 +216,14 @@ BAL_0XNeg. Motor that moves the balancing mass located in x- of the telescope co
 
 BAL_90XNeg. Motor that moves the balancing mass located in x- of the telescope coordinate axes and has effect when elevation axis of the telescope is at 90 degrees.
 
-## Azimuth Cable Wrap
+### Azimuth Cable Wrap
 
 The AZCW_Axis1. The motor connected to channel one of the 105U3 HMD01 Bosch Rexroth driver
 
 The AZCW_Axis2. The motor connected to channel two of the 105U3 HMD01 Bosch Rexroth driver
 
-## Camera Cable Wrap
+### Camera Cable Wrap
 
 The CCW_Axis1. The motor connected to channel one of the 105U4 HMD01 Bosch Rexroth driver (105U2 for CCWAux cabinet).
 
 The CCW_Axis2. The motor connected to channel two of the 105U4 HMD01 Bosch Rexroth driver (105U2 for CCWAux cabinet).
-
-
-
