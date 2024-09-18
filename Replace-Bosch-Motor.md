@@ -27,43 +27,43 @@ After completing the common steps, it could be some checks that are subsystem sp
 
 Common steps
 
-1.  Open the Bosch-Rexroth engineering tool IndraWorks Engineering
-2.  Open the project with the motion configuration.
-    1.  For MCS, AllDrivesNewverMLCFrimware.xiwp
-    2.  For CCWAux, CCWAux.xiwp
-3.  Find the motor in the Project Explorer under the IndaMotionMlc1-\>Motion-\>Real axes. For CCWAux only the two drives for CCW will be available, but for MCS the complete list shown in the Figure 1, will be available. See Annex 2 for more information about motor names.
+1. Open the Bosch-Rexroth engineering tool IndraWorks Engineering
+2. Open the project with the motion configuration.
+    1. For MCS, AllDrivesNewverMLCFrimware.xiwp
+    2. For CCWAux, CCWAux.xiwp
+3. Find the motor in the Project Explorer under the IndaMotionMlc1-\>Motion-\>Real axes. For CCWAux only the two drives for CCW will be available, but for MCS the complete list shown in the Figure 1, will be available. See Annex 2 for more information about motor names.
 
     ![Motor list for MCS](media/8db94c18434ff0f1d3f80a93d97ae2b8.png)
 
-4.  Note down the number associated with the desired motor
-5.  If the movement with the motors is still possible, move the subsystem to the zero-position using the EUI.
-    1.  For locking pins use the free position.
-    2.  For deployable platforms use the retracted position.
-    3.  For Mirror Covers use the retracted position
-    4.  For Mirror Cover locks, put the mirror cover in retracted position and lock with mirror cover locks.
-    5.  For Balancing motors, move each motor to zero position.
-    6.  Azimuth Cable Wrap. Move azimuth to zero absolute position, then move both Azimuth Cable Wrap motors to zero position.
-    7.  Camera Cable Wrap. Move camera rotator to zero position, then move both Camera Cable Wrap motors to zero position.
-6.  Use the Telescope correct position to ensure that the operation is possible
-7.  Power off the EUI computer (MCC), and the electrical cabinets.
-8.  Take all necessary security measures that are necessary to lock the system according to health & safety.
-9.  Lock the element to avoid movement when motor and brake is released (this is not necessary for Azimuth Cable Wrap and Camera Cable Wrap, since the other motor will keep the subsystem braked).
-10.  Take out the motor.
-11.  If the movement was not possible in step 5, move the element to zero-position manually (see Annex 1).
-12.  Fit the motor to its position and wire according with document **1**.
+4. Note down the number associated with the desired motor
+5. If the movement with the motors is still possible, move the subsystem to the zero-position using the EUI.
+    1. For locking pins use the free position.
+    2. For deployable platforms use the retracted position.
+    3. For Mirror Covers use the retracted position
+    4. For Mirror Cover locks, put the mirror cover in retracted position and lock with mirror cover locks.
+    5. For Balancing motors, move each motor to zero position.
+    6. Azimuth Cable Wrap. Move azimuth to zero absolute position, then move both Azimuth Cable Wrap motors to zero position.
+    7. Camera Cable Wrap. Move camera rotator to zero position, then move both Camera Cable Wrap motors to zero position.
+6. Use the Telescope correct position to ensure that the operation is possible
+7. Power off the EUI computer (MCC), and the electrical cabinets.
+8. Take all necessary security measures that are necessary to lock the system according to health & safety.
+9. Lock the element to avoid movement when motor and brake is released (this is not necessary for Azimuth Cable Wrap and Camera Cable Wrap, since the other motor will keep the subsystem braked).
+10. Take out the motor.
+11. If the movement was not possible in step 5, move the element to zero-position manually (see Annex 1).
+12. Fit the motor to its position and wire according with document **1**.
 13. Unlock the element.
 14. Open the Bosch-Rexroth engineering tool IndraWorks Engineering. The IndraWorks must be placed in a windows machine with Ethernet connection to the MLC (209A1 element in the schematics MCS_Design_ElectricalSchematics). This document is written for IndraWorks ML\* 14V22 P7.
-    1.  For MCS, place the windows machine connected to port Gi1/2 of the Cisco IE3000 switch inside the cabinet using the ip 192.168.209.225 with 255.255.0.0 mask.
-    2.  For CCWAux place the windows machine connected to any port of the Cisco IE3000 switch inside the cabinet with the ip 192.168.209.225 with 255.255.255.0 mask.
-    3.  If a and b does not work use direct connection to the MLC.
+    1. For MCS, place the windows machine connected to port Gi1/2 of the Cisco IE3000 switch inside the cabinet using the ip 192.168.209.225 with 255.255.0.0 mask.
+    2. For CCWAux place the windows machine connected to any port of the Cisco IE3000 switch inside the cabinet with the ip 192.168.209.225 with 255.255.255.0 mask.
+    3. If a and b does not work use direct connection to the MLC.
 15. Open the project with the motion configuration.
-    1.  For MCS, AllDrivesNewverMLCFrimware.xiwp
-    2.  For CCWAux, CCWAux.xiwp
+    1. For MCS, AllDrivesNewverMLCFrimware.xiwp
+    2. For CCWAux, CCWAux.xiwp
 16. Connect to MLC. Selecting something in the IndraMotionMlc project tree, the “Switches Device Online” icon is available, or in the Menu “IndraMotionMlc1-\>Switch Online”
 
     ![Switches Device Online button in the menu bar](media/8d3a34dcdf84f2abc80f2d62edce436d.png)
 
-17.  Enable the axis commissioning in the Motion field under the IndraMotionMlc target. Right click on the Motion.
+17. Enable the axis commissioning in the Motion field under the IndraMotionMlc target. Right click on the Motion.
 
     ![Axis commissioning in the context menu](media/AxisCommisioning.png)
 
@@ -73,7 +73,7 @@ Common steps
 
 19. Select the axis and in Positioning tab click on “Set absolute position”.
 20. Disconnect the IndraWorks clicking in the “Switch Devices Offline” icon or in the Menu “IndarMotionMlc1-\>Switch Offline”.
-    1.  When asked, save the parameters in drives.
+    1. When asked, save the parameters in drives.
 
 ## Subsystem specific checks
 
@@ -109,19 +109,19 @@ If the specific check 3.2.1.2 fails, it could be because the arrows are not alig
 
 The steps to find the zero of the azimuth cable wrap, when none of the motors is able to move the azimuth cable wrap, are describe in next points.
 
-1.  Proceed with the procedure specified in section 3.1 up to point 13 inclusive
-2.  In the project view of Indraworks Engineering, select one the motors for Azimuth Cable Wrap and open the XXX window
-3.  In XXX box put actual Azimuth Absolute Position +360 deg (this value must not be very accurate). For instance, if the actual Azimuth position is 123 deg put 483 deg in XXX box.
-4.  Press the button XXX to set this position as actual motor position.
-5.  Check that Azimuth cable is close to the center of the physical limits between azimuth and azimuth cable wrap limits.
-6.  If the motor is not in the center of the physical limits, enable the motor using and move the azimuth cable wrap to position in the centre of the limits. To enable the motor and move proceed with next steps
-    1.  Proceed with the steps 15 to 16 of section 3.1.
-    2.  Go to the Positioning tab and insert 0.1 in the Velocity box.
-    3.  Enable the motor
-    4.  In Positioning tab use the position box to put the desired new position to correct the gap between the actual position and the center of the limits, and click Execute. This step could be executed several times.
-7.  Disable the motor
-8.  Replace the second motor and proceed in the same way as for the first one
-9.  In the XXX box of step 3 put 360 deg
+1. Proceed with the procedure specified in section 3.1 up to point 13 inclusive
+2. In the project view of Indraworks Engineering, select one the motors for Azimuth Cable Wrap and open the XXX window
+3. In XXX box put actual Azimuth Absolute Position +360 deg (this value must not be very accurate). For instance, if the actual Azimuth position is 123 deg put 483 deg in XXX box.
+4. Press the button XXX to set this position as actual motor position.
+5. Check that Azimuth cable is close to the center of the physical limits between azimuth and azimuth cable wrap limits.
+6. If the motor is not in the center of the physical limits, enable the motor using and move the azimuth cable wrap to position in the centre of the limits. To enable the motor and move proceed with next steps
+    1. Proceed with the steps 15 to 16 of section 3.1.
+    2. Go to the Positioning tab and insert 0.1 in the Velocity box.
+    3. Enable the motor
+    4. In Positioning tab use the position box to put the desired new position to correct the gap between the actual position and the center of the limits, and click Execute. This step could be executed several times.
+7. Disable the motor
+8. Replace the second motor and proceed in the same way as for the first one
+9. In the XXX box of step 3 put 360 deg
 10. Close Axis Commissioning.
 11. Power on Azimuth
 12. Home Azimuth
