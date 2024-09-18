@@ -1,25 +1,25 @@
-# ReplaceBoschMotor
+# Replace Bosch Motor
 
-##  Introduction
+## Introduction
 
 This document describes the procedure to replace a Bosch motor or to perform a maintenance operation out of its place.
 
-Bosch motor are used for 
- * Locking pins
- * Deployable platforms
- * Azimuth Cable Wrap
- * Camera Cable Wrap
- * Balancing System
- * Mirror Cover and Mirror Cover locks
+Bosch motor are used for:
 
-##  Reference document list
+- Locking pins
+- Deployable platforms
+- Azimuth Cable Wrap
+- Camera Cable Wrap
+- Balancing System
+- Mirror Cover and Mirror Cover locks
+
+## Reference document list
 
 | **No.** | **DOCUMENT** | **CODE** | **VERSION** |
 |---------|--------------|----------|-------------|
 | **1**   |MCS Design Electrical Schematics|3151_MCS_0022|9.0|
 
-
-##  Motor replacement procedure
+## Motor replacement procedure
 
 The procedure for replacement the motors have some steps that are common for all subsystems.
 
@@ -35,8 +35,7 @@ Common steps
 
     ![Motor list for MCS](media/8db94c18434ff0f1d3f80a93d97ae2b8.png)
 
-
-4.  Notedown the number associated with the desired motor
+4.  Note down the number associated with the desired motor
 5.  If the movement with the motors is still possible, move the subsystem to the zero-position using the EUI.
     1.  For locking pins use the free position.
     2.  For deployable platforms use the retracted position.
